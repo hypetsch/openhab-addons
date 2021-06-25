@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lgtv"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+
+	<!-- Sample Thing Type -->
+	<thing-type id="tv">
+		<!-- Comment this in for Things which need a Bridge to function.
+			<supported-bridge-type-refs>
+			<bridge-type-ref id="LgTvBridge" />
+			</supported-bridge-type-refs>
+		-->
+
+		<label>LG TV</label>
+		<description>A LG TV capable of UART 2.0</description>
+
+		<channels>
+			<channel id="send-key" typeId="send_key"/>
+		</channels>
+
+		<config-description>
+			<parameter name="hostname" type="text" required="true">
+				<context>network-address</context>
+				<label>Network Address</label>
+				<description>Hostname or IP address of the TV</description>
+			</parameter>
+			<parameter name="port" type="integer" required="true" min="0" max="65535">
+				<label>Port</label>
+				<description>Listening port of the TV (default 8080)</description>
+				<default>8080</default>
+				<advanced>true</advanced>
+			</parameter>
+			<parameter name="pairingKey" type="text" required="false">
+				<label>Pairing Key</label>
+				<description>Key used during pairing phase</description>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<channel-type id="send_key">
+		<item-type>String</item-type>
+		<label>Send Key</label>
+		<description>Sends one of the remote control commands to the TV</description>
+	</channel-type>
+</thing:thing-descriptions>

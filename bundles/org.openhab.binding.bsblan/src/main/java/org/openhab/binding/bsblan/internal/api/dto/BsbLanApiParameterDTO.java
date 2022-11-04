@@ -39,7 +39,11 @@ public class BsbLanApiParameterDTO {
         @SerializedName("7")
         DT_STRN(7), // string
         @SerializedName("8")
-        DT_DWHM(8); // PPS time (day of week, hour:minute)
+        DT_DWHM(8), // PPS time (day of week, hour:minute)
+        @SerializedName("9")
+        DT_TMPR(9), // time program
+        @SerializedName("10")
+        DT_THMS(10); // time (hours:minutes:seconds)
 
         private final int value;
 

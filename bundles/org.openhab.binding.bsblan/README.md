@@ -54,7 +54,7 @@ Note: If you would also like to use the binding to set parameter values, ensure 
 | switch-value | Switch    | Value of the parameter.<br />`0` is interpreted as `OFF`, everything else as `ON`. |
 | unit         | String    | Unit as provided by the BSB-LAN device (HTML unescaping applied).                  |
 | description  | String    | Description as provided by the BSB-LAN device.                                     |
-| datatype     | Number    | Datatype as provided by the BSB-LAN device. Possible values are currently<br />`0` for `DT_VALS`: plain value<br />`1` for `DT_ENUM`: value (8/16 Bit) followed by space followed by text<br />`2` for `DT_BITS`: bit value followed by bitmask followed by text<br />`3` for `DT_WDAY`: weekday<br />`4` for `DT_HHMM`: hour:minute<br />`5` for `DT_DTTM`: date and time<br />`6` for `DT_DDMM`: day and month<br />`7` for `DT_STRN`: String<br />`8` for `DT_DWHM`: PPS time (day of week, hour:minute) |
+| datatype     | Number    | Datatype as provided by the BSB-LAN device. Possible values are currently<br />`0` for `DT_VALS`: plain value<br />`1` for `DT_ENUM`: value (8/16 Bit) followed by space followed by text<br />`2` for `DT_BITS`: bit value followed by bitmask followed by text<br />`3` for `DT_WDAY`: weekday<br />`4` for `DT_HHMM`: hour:minute<br />`5` for `DT_DTTM`: date and time<br />`6` for `DT_DDMM`: day and month<br />`7` for `DT_STRN`: String<br />`8` for `DT_DWHM`: PPS time (day of week, hour:minute)<br />`9` for `DT_TMPR`: time program<br />`10` for `DT_THMS`: time (hours:minutes:seconds) |
 
 ## Full Example
 

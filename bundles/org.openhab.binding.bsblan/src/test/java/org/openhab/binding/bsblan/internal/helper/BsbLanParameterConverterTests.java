@@ -203,9 +203,7 @@ public class BsbLanParameterConverterTests {
         parameter.unit = "&deg;C";
         parameter.value = "22.5";
 
-        State state = null;
-
-        state = BsbLanParameterConverter.getState(PARAMETER_CHANNEL_UNIT, parameter);
+        State state = BsbLanParameterConverter.getState(PARAMETER_CHANNEL_UNIT, parameter);
         assertNotNull(state);
         assertEquals(new StringType("°C"), state.as(StringType.class));
     }

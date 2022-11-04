@@ -44,6 +44,7 @@ public class BsbLanApiContentConverterTests {
         assertTrue(r.containsKey(700));
 
         BsbLanApiParameterDTO p = r.get(700);
+        assertNotNull(p);
         assertEquals("Betriebsart", p.name);
         assertEquals("0", p.value);
         assertEquals("", p.unit);
